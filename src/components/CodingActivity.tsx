@@ -83,34 +83,34 @@ export default function CodingActivity() {
             </div>
 
             <div className="overflow-x-auto">
-              <div className="min-w-[800px]">
+              <div className="min-w-[600px] max-w-4xl mx-auto">
                 {/* Month labels */}
-                <div className="flex justify-between mb-2 text-xs text-muted-foreground">
+                <div className="flex justify-between mb-2 text-xs text-muted-foreground px-2">
                   {months.map((month) => (
                     <span key={month}>{month}</span>
                   ))}
                 </div>
                 
                 {/* Activity grid */}
-                <div className="grid grid-cols-53 gap-1">
-                  {activityData.map((day, index) => (
+                <div className="grid grid-cols-52 gap-1 p-2">
+                  {activityData.slice(0, 364).map((day, index) => (
                     <motion.div
                       key={day.date}
                       initial={{ opacity: 0, scale: 0 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ 
-                        duration: 0.2, 
-                        delay: index * 0.001 
+                        duration: 0.1, 
+                        delay: index * 0.0005 
                       }}
-                      className={`activity-square activity-level-${day.level} hover:scale-150 transition-transform cursor-pointer`}
+                      className={`activity-square activity-level-${day.level} hover:scale-125 transition-transform cursor-pointer`}
                       title={`${day.date}: ${day.commits} contributions`}
                     />
                   ))}
                 </div>
                 
                 {/* Legend */}
-                <div className="flex items-center justify-end gap-2 mt-4 text-xs text-muted-foreground">
+                <div className="flex items-center justify-end gap-2 mt-4 text-xs text-muted-foreground px-2">
                   <span>Less</span>
                   <div className="flex gap-1">
                     {[0, 1, 2, 3, 4].map((level) => (
