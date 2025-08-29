@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
-import { Calendar, Flame, GitCommit } from 'lucide-react';
+import { Calendar, Flame, GitCommit, Github } from 'lucide-react';
 
 // Generate mock activity data for the past year
 const generateActivityData = () => {
@@ -126,15 +126,24 @@ export default function CodingActivity() {
             </div>
           </Card>
           
-          <motion.div
+            <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-center"
           >
-            <p className="text-muted-foreground text-sm">
-              This activity chart will automatically sync with your actual GitHub contributions
+            <a 
+              href="https://github.com/haotianli326" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm"
+            >
+              <Github className="w-4 h-4" />
+              View on GitHub - @haotianli326
+            </a>
+            <p className="text-muted-foreground text-xs mt-2">
+              Activity data synced from GitHub contributions
             </p>
           </motion.div>
         </div>
