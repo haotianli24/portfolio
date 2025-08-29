@@ -58,9 +58,9 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex justify-center items-center text-muted-foreground"
+            className="flex justify-center items-center text-muted-foreground mt-16"
           >
-            <div className="flex flex-col items-center animate-bounce">
+            <div className="flex f  lex-col items-center animate-bounce">
               <p className="text-sm mb-2">Scroll to explore</p>
               <ArrowDown className="w-5 h-5" />
             </div>
