@@ -61,7 +61,26 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				glow: 'hsl(var(--glow))',
+				'glow-subtle': 'hsl(var(--glow-subtle))',
+				'activity-0': 'hsl(var(--activity-level-0))',
+				'activity-1': 'hsl(var(--activity-level-1))',
+				'activity-2': 'hsl(var(--activity-level-2))',
+				'activity-3': 'hsl(var(--activity-level-3))',
+				'activity-4': 'hsl(var(--activity-level-4))'
+			},
+			backgroundImage: {
+				'hero-gradient': 'var(--hero-gradient)',
+				'card-gradient': 'var(--card-gradient)'
+			},
+			boxShadow: {
+				'glow': 'var(--shadow-glow)',
+				'card': 'var(--shadow-card)'
+			},
+			transitionTimingFunction: {
+				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
+				'spring': 'cubic-bezier(0.175, 0.885, 0.32, 1.275)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
