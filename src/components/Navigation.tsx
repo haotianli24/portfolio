@@ -17,10 +17,10 @@ export default function Navigation() {
   }, []);
 
   const navItems = [
-    { name: 'About', href: '#about' },
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
+    { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' }
   ];
 
@@ -64,9 +64,15 @@ export default function Navigation() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
             >
-              <Button variant="outline" size="sm" className="gap-2">
-                <Download className="w-4 h-4" />
-                Resume
+              <Button asChild variant="outline" size="sm" className="gap-2">
+                <a
+                  href="https://haotianli24.github.io/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Download className="w-4 h-4" />
+                  Resume
+                </a>
               </Button>
             </motion.div>
           </div>
@@ -99,9 +105,15 @@ export default function Navigation() {
                   {item.name}
                 </a>
               ))}
-              <Button variant="outline" size="sm" className="gap-2 mt-4">
-                <Download className="w-4 h-4" />
-                Resume
+              <Button asChild variant="outline" size="sm" className="gap-2 mt-4">
+                <a
+                  href="https://haotianli24.github.io/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Download className="w-4 h-4" />
+                  Resume
+                </a>
               </Button>
             </motion.div>
           )}

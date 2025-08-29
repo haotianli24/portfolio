@@ -16,7 +16,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-background/70" />
       </div>
 
-      <div className="container mx-auto px-6 py-20 relative z-10">
+      <div className="container mx-auto px-6 py-20 relative z-10 mt-36">
         <div className="text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -40,17 +40,64 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex justify-center gap-4 mb-12"
           >
-            <Button size="lg" className="gap-2">
+            <Button 
+              size="lg" 
+              className="gap-2"
+              onClick={() => {
+                navigator.clipboard.writeText('howtian@umich.edu');
+                const button = event?.target as HTMLElement;
+                if (button) {
+                  const textElement = button.querySelector('span');
+                  if (textElement) {
+                    textElement.textContent = 'howtian@umich.edu';
+                  }
+                }
+                // Show toast notification
+                const toast = document.createElement('div');
+                toast.className = 'fixed top-24 left-1/2 transform -translate-x-1/2 bg-black/80 text-white px-6 py-3 rounded-lg shadow-lg z-50 backdrop-blur-sm';
+                toast.textContent = 'Email copied to clipboard!';
+                document.body.appendChild(toast);
+                
+                // Remove toast after 3 seconds
+                setTimeout(() => {
+                  if (toast.parentNode) {
+                    toast.parentNode.removeChild(toast);
+                  }
+                }, 3000);
+              }}
+            >
               <Mail className="w-5 h-5" />
-              Get In Touch
+              <span>Get In Touch</span>
             </Button>
-            <Button variant="outline" size="lg" className="gap-2">
-              <Github className="w-5 h-5" />
-              GitHub
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="gap-2"
+            >
+              <a
+                href="https://github.com/haotianli24"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="w-5 h-5" />
+                GitHub
+              </a>
             </Button>
-            <Button variant="outline" size="lg" className="gap-2">
-              <Linkedin className="w-5 h-5" />
-              LinkedIn
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="gap-2"
+            >
+              <a
+                href="https://www.linkedin.com/in/haotian-li24/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin className="w-5 h-5" />
+                LinkedIn
+              </a>
             </Button>
           </motion.div>
 
@@ -58,9 +105,8 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex justify-center items-center text-muted-foreground"
           >
-            <div className="flex f  lex-col items-center animate-bounce">
+            <div className="flex flex-col items-center animate-bounce mt-48">
               <p className="text-sm mb-2">Scroll to explore</p>
               <ArrowDown className="w-5 h-5" />
             </div>
