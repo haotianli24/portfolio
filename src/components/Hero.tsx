@@ -28,9 +28,9 @@ export default function Hero() {
               Haotian Li
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              computer eng @ university of michigan
-              interested in backend, consumer apps, and web3
-              currently seeking internships for 2026
+              <span className="block">computer eng @ university of michigan</span>
+              <span className="block">interested in backend, consumer apps, and web3</span>
+              <span className="block">currently seeking internships for 2026</span>
             </p>
           </motion.div>
 
