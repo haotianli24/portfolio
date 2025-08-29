@@ -27,12 +27,10 @@ export default function Hero() {
             <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-text">
               Haotian Li
             </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-foreground/90">
-              Computer Engineering Student
-            </h2>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Junior at University of Michigan - Ann Arbor, passionate about building innovative 
-              solutions with cutting-edge technology. Currently seeking internship opportunities.
+              computer eng @ university of michigan
+              interested in backend, consumer apps, and web3
+              currently seeking internships for 2026
             </p>
           </motion.div>
 
