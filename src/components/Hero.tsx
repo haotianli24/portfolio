@@ -59,7 +59,7 @@ export default function Hero() {
                 document.body.appendChild(toast);
                 
                 // Remove toast after 3 seconds
-                setTimeout(() => {
+                setTimeout(() => { 
                   if (toast.parentNode) {
                     toast.parentNode.removeChild(toast);
                   }
