@@ -66,7 +66,7 @@ export default function Navigation() {
             >
               <Button asChild variant="outline" size="sm" className="gap-2">
                 <a
-                  href="https://haotianli24.github.io/resume.pdf"
+                  href="https://drive.google.com/file/d/1dhhU4l08jUfjpsvtPhnAIf41OiYKHEiz/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
